@@ -40,6 +40,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
+  font-family: "Bai Jamjuree", sans-serif;
   background:
     radial-gradient(circle at top left, rgba(141, 219, 189, 0.25), transparent 30%),
     radial-gradient(circle at top right, rgba(203, 184, 255, 0.25), transparent 30%),
