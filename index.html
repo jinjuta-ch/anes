@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>งานพยาบาลวิสัญญี | โรงพยาบาลมหาวิทยาลัยพะเยา</title>
+  <meta name="description" content="เว็บไซต์ตัวอย่างสำหรับงานพยาบาลผู้ป่วยนอก โรงพยาบาลมหาวิทยาลัยพะเยา ออกแบบสมัยใหม่ เรียบหรู รองรับมือถือและปรับแต่งต่อได้" />
+  <meta name="keywords" content="งานพยาบาลผู้ป่วยนอก, OPD, โรงพยาบาลมหาวิทยาลัยพะเยา, University of Phayao Hospital" />
+  <meta name="theme-color" content="#e8fff6" />
+  <meta property="og:title" content="งานพยาบาลผู้ป่วยนอก | โรงพยาบาลมหาวิทยาลัยพะเยา" />
+  <meta property="og:description" content="หน้าเว็บไซต์ตัวอย่างสำหรับหน่วยงานพยาบาลผู้ป่วยนอก พร้อมข่าว กิจกรรม เอกสาร และหน้าบุคลากร" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8+q46cDfLr9P7k9RwhKkMHpvLbHG9SrA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหาหลัก</a>
+
+  <!-- =========================
+    MENU HEADER SECTION
+    เมนูหลักของเว็บไซต์
+  ========================== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="หน้าแรก งานพยาบาลผู้ป่วยนอก">
+        <span class="brand-mark"><i class="fa-solid fa-heart-pulse"></i></span>
+        <span class="brand-text">
+          <strong>AnesUP</strong>
+          <small>โรงพยาบาลมหาวิทยาลัยพะเยา</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="เปิดหรือปิดเมนู" aria-expanded="false" aria-controls="siteNav">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="เมนูหลัก">
+        <ul>
+          <li><a href="#aboutme">เกี่ยวกับหน่วยงาน</a></li>
+          <li><a href="pahr/personel.html">บุคลากร</a></li>
+          <li><a href="#news">ข่าวประชาสัมพันธ์</a></li>
+          <li><a href="#downloads">ดาวน์โหลด</a></li>
+          <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =========================
+      HERO SIDEBAR SECTION
+      ส่วนแนะนำหน่วยงาน พร้อม CTA และข้อมูลเด่น
+    ========================== -->
+   <!-- ==================================================
+  HERO SECTION (Full Width + Slider)
+================================================== -->
+<section class="hero-section full-hero">
+
+  <!-- TEXT -->
+  <div class="container hero-grid">
+    <div class="hero-copy glass-card">
+      <span class="eyebrow">Anesthesiology</span>
+
+      <h1>งานการพยาบาลวิสัญญี</h1>
+      <h1>โรงพยาบาลมหาวิทยาลัยพะเยา</h1>
+
+      <p>
+        ยินดีต้อนรับเข้าสู่งานการพยาบาลวิสัญญี โรงพยาบาลมหาวิทยาลัยพะเยา
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#news">
+          <i class="fa-regular fa-newspaper"></i> ดูข่าวล่าสุด
+        </a>
+
+        <a class="btn btn-secondary" href="page/personel.html">
+          <i class="fa-solid fa-user-group"></i> หน้าบุคลากร
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDER -->
+  <div class="hero-slider">
+
+    <div class="slider-track" id="sliderTrack">
+      <div class="slide"><img src="assets/img/banner1.jpg" alt="ห้องผ่าตัด"></div>
+      <div class="slide"><img src="assets/img/banner2.jpg" alt="ทีมวิสัญญี"></div>
+      <div class="slide"><img src="assets/img/banner3.jpg" alt="อุปกรณ์การแพทย์"></div>
+    </div>
+
+    <!-- BUTTON -->
+    <button class="slider-btn prev" onclick="moveSlide(-1)">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <button class="slider-btn next" onclick="moveSlide(1)">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- DOT -->
+    <div class="slider-dots">
+      <span onclick="goToSlide(0)"></span>
+      <span onclick="goToSlide(1)"></span>
+      <span onclick="goToSlide(2)"></span>
+    </div>
+
+  </div>
+
+</section>
+
+        
+        
+      </div>
+    </section>
+
+    <!-- =========================
+      ABOUT ME SECTION
+      แนะนำหน่วยงาน / วิสัยทัศน์ / ภารกิจ
+    ========================== -->
+    <section class="section" id="aboutme">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">ABOUT US</span>
+          <h2>เกี่ยวกับหน่วยงาน</h2>
+        </div>
+
+        <div class="about-grid">
+          <article class="info-card">
+            <div class="card-icon"><i class="fa-solid fa-user-nurse"></i></div>
+            <h3>บทบาทของหน่วยงาน</h3>
+            <p>
+              ให้บริการระงับความรู้สึกตลอด 24 ชั่วโมง แก่ผู้ป่วยที่เข้ารับการผ่าตัดและ
+การตรวจพิเศษทางกล้อง โดยให้บริการระงับความรู้สึกแบบทั่วร่างกายและการระงับความรู้สึก
+แบบเฉพาะส่วน รวมทั้งการเฝ้าระวังผู้ป่วยโดยบุคลากรทางวิสัญญี
+            </p>
+          </article>
+
+          <article class="info-card">
+            <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h3>เป้าหมาย</h3>
+            <p>
+              เพื่อให้บริการระงับความรู้สึกที่ได้คุณภาพตามมาตรฐานวิชาชีพ ปฏิบัติงาน
+ร่วมกับทีมสหสาขาวิชาชีพแบบองค์รวม โดยเน้นผู้รับบริการเป็นศูนย์กลาง เพื่อให้ผู้รับบริการ
+ปลอดภัยและพึงพอใจ
+            </p>
+          </article>
+
+          <article class="info-card">
+            <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+            <h3>ขอบเขตการให้บริการ</h3>
+            <p>
+              ให้บริการระงับความรู้สึกแก่ผู้ป่วยนอกและผู้ป่วยในที่เข้ารับการผ่าตัดและการตรวจพิเศษ
+ทางกล้อง ทั้งในภาวะปกติและฉุกเฉิน ทุกกลุ่มอายุตลอด 24 ชั่วโมง
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+      NEWS SECTION
+      ข่าวประชาสัมพันธ์แบบกล่อง + ข่าวล่าสุด
+    ========================== -->
+    <section class="section section-alt" id="news">
+      <div class="container">
+        <div class="section-heading two-col-head">
+          <div>
+            <span class="section-kicker">NEWS & UPDATES</span>
+            <h2>ข่าวประชาสัมพันธ์</h2>
+          
+          </div>
+          <a href="#contact" class="text-link">แจ้งแก้ไขข่าว <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card featured-news">
+            <div class="news-tag">ข่าวล่าสุด</div>
+            
+            <p>
+              หน้าเว็บไซต์นี้ถูกจัดทำขึ้นเพื่อเป็นต้นแบบการนำเสนอข้อมูลหน่วยงาน เช่น ข่าวประชาสัมพันธ์
+              ตารางกิจกรรม ช่องทางติดต่อ และเอกสารดาวน์โหลด โดยคุณสามารถแก้ข้อความ รูปภาพ ลิงก์ และจำนวนกล่องข่าวได้ภายหลัง
+            </p>
+            <div class="news-meta">
+              <span><i class="fa-regular fa-calendar"></i> อัปเดตตัวอย่าง: 18 มีนาคม 2026</span>
+              <span><i class="fa-regular fa-folder-open"></i> Demo Content</span>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-tag soft">ประกาศ</div>
+            <h3>ตัวอย่างประกาศการให้บริการผู้ป่วยนอก</h3>
+            <p>ใช้สำหรับประกาศเวลาให้บริการ ขั้นตอนลงทะเบียน สิทธิการรักษา หรือแนวปฏิบัติสำหรับผู้มารับบริการ</p>
+            <a href="#" aria-label="อ่านต่อข่าวตัวอย่างประกาศการให้บริการผู้ป่วยนอก">อ่านต่อ</a>
+          </article>
+
+          <article class="news-card">
+            <div class="news-tag soft">กิจกรรม</div>
+            <h3>ตัวอย่างข่าวอบรมพัฒนาศักยภาพบุคลากร</h3>
+            <p>ใช้สื่อสารข่าวประชุม อบรม ฟื้นฟูวิชาการ หรือโครงการพัฒนาคุณภาพงานบริการในหน่วยงาน</p>
+            <a href="#" aria-label="อ่านต่อข่าวตัวอย่างอบรมพัฒนาศักยภาพบุคลากร">อ่านต่อ</a>
+          </article>
+
+          <article class="news-card">
+            <div class="news-tag soft">ประชาสัมพันธ์</div>
+            <h3>ตัวอย่างข่าวช่องทางการติดต่อหน่วยงาน</h3>
+            <p>ใช้สำหรับแจ้งเบอร์ภายใน สถานที่ตั้ง การติดต่อธุรการ และช่องทางรับข้อเสนอแนะของผู้รับบริการ</p>
+            <a href="#" aria-label="อ่านต่อข่าวตัวอย่างช่องทางการติดต่อ">อ่านต่อ</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+      UPCOMING ACTIVITIES SECTION
+      กิจกรรมภายในที่กำลังจะเกิดขึ้น
+    ========================== -->
+    <section class="section" id="activities">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">UPCOMING ACTIVITIES</span>
+          <h2>กิจกรรมภายในของฉันที่กำลังจะเกิดขึ้น</h2>
+          <p>แสดงรายการกิจกรรมภายในแบบ timeline / schedule card</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">24 มี.ค. 2026</div>
+            <div class="timeline-body">
+              <h3>ประชุมสรุปงานประจำสัปดาห์</h3>
+              <p>ตัวอย่างกิจกรรมประชุมติดตามคุณภาพบริการ งานเวชระเบียน การคัดกรอง และประเด็นความปลอดภัยผู้ป่วย</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">02 เม.ย. 2026</div>
+            <div class="timeline-body">
+              <h3>อบรมการสื่อสารบริการด้วยหัวใจ</h3>
+              <p>กิจกรรมตัวอย่างเพื่อเสริมทักษะการสื่อสารของบุคลากรหน้าเคาน์เตอร์และทีมพยาบาลผู้ป่วยนอก</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">10 เม.ย. 2026</div>
+            <div class="timeline-body">
+              <h3>ทบทวนแผนรับมือความแออัด OPD</h3>
+              <p>กิจกรรมจำลองแนวทางจัดการช่วงผู้รับบริการหนาแน่น พร้อมวิเคราะห์ flow ผู้ป่วยในหน่วยงาน</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+      DOCUMENT CATEGORY SECTION
+      หมวดหมู่เอกสาร / ดาวน์โหลด
+    ========================== -->
+    <section class="section section-alt" id="downloads">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">DOCUMENT CATEGORIES</span>
+          <h2>หมวดหมู่เอกสาร</h2>
+          <p>จัดกลุ่มเอกสารที่ผู้ใช้งานเข้าถึงบ่อย พร้อมปุ่มดาวน์โหลดหรือเชื่อมลิงก์ภายหลัง</p>
+        </div>
+
+        <div class="doc-grid">
+          <article class="doc-card">
+            <i class="fa-regular fa-file-lines"></i>
+            <h3>แบบฟอร์มหน่วยงาน</h3>
+            <p>แบบฟอร์มบันทึกการพยาบาล แบบประเมิน และเอกสารใช้งานภายใน</p>
+            <a href="#">ดาวน์โหลดตัวอย่าง</a>
+          </article>
+          <article class="doc-card">
+            <i class="fa-regular fa-file-pdf"></i>
+            <h3>คู่มือการให้บริการ</h3>
+            <p>เอกสารแนะนำผู้ป่วย</p>
+            <a href="#">ดาวน์โหลดตัวอย่าง</a>
+          </article>
+          <article class="doc-card">
+            <i class="fa-regular fa-file-word"></i>
+            <h3>เอกสารประชุม</h3>
+            <p>ระเบียบวาระ รายงานการประชุม และสรุปผลการดำเนินงานรายเดือน</p>
+            <a href="#">ดาวน์โหลดตัวอย่าง</a>
+          </article>
+          <article class="doc-card">
+            <i class="fa-regular fa-file-excel"></i>
+            <h3>สถิติและรายงาน</h3>
+            <p>เช่น สถิติผู้รับบริการ ตัวชี้วัดคุณภาพ และรายงานผลการปฏิบัติงานของหน่วยงาน</p>
+            <a href="#">ดาวน์โหลดตัวอย่าง</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+      CONTACT SECTION
+      ช่องทางติดต่อ / แผนที่ / ข้อมูลเพิ่มเติม
+    ========================== -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-card glass-card">
+          <span class="section-kicker">CONTACT</span>
+          <h2>ติดต่อเรา</h2>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-location-dot"></i> 19/1 หมู่ 2 ถ.พหลโยธิน ต.แม่กา อ.เมืองพะเยา จ.พะเยา 56000</li>
+            <li><i class="fa-solid fa-phone"></i> โทรศัพท์กลาง 0 5446 6666 ต่อ 7003</li>
+            <li><i class="fa-solid fa-fax"></i> โทรสาร 0 5446 6759</li>
+            <li><i class="fa-solid fa-envelope"></i> uph@up.ac.th</li>
+          </ul>
+        </div>
+
+        <div class="contact-card soft-panel">
+          <h3>หมายเหตุสำหรับการใช้งานจริง</h3>
+          <p>
+            คุณสามารถแก้ไขชื่อหัวหน้า งานพยาบาล ข้อมูลบุคลากร รูปภาพข่าว เอกสารดาวน์โหลด
+            และตารางกิจกรรมได้ภายหลัง โดยไม่ต้องแก้ไขโครงสร้างหน้าใหม่ทั้งหมด
+          </p>
+          <div class="mini-stats">
+            <div>
+              <strong>2 หน้า</strong>
+              <span>index + personel</span>
+            </div>
+            <div>
+              <strong>2 โฟลเดอร์</strong>
+              <span>CSS + JS</span>
+            </div>
+            <div>
+              <strong>Responsive</strong>
+              <span>มือถือ / iPad / Desktop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+    FOOTER SECTION
+    ส่วนท้ายเว็บไซต์
+  ========================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h2>งานพยาบาลวิสัญญี</h2>
+        <p>เว็บไซต์ต้นแบบสำหรับโรงพยาบาลมหาวิทยาลัยพะเยา</p>
+      </div>
+      <div class="footer-links">
+        <a href="#top">กลับด้านบน</a>
+        <a href="pahr/personel.html">หน้าบุคลากร</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
