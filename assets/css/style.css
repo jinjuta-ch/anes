@@ -234,3 +234,91 @@ a { color: inherit; text-decoration: none; transition: 0.3s; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+/* Container ใหญ่ */
+.team-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* ระยะห่างระหว่างคน */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* ตั้งค่าการแสดงผล Grid */
+.intro-card {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* รูป 1 ส่วน : ข้อความ 1.5 ส่วน */
+  align-items: center;
+  gap: 30px;
+}
+
+/* สลับฝั่งให้รูปอยู่ขวา */
+.intro-card.right {
+  grid-template-columns: 1.5fr 1fr;
+}
+
+/* วงกลมล้อมรูป (เหมือนต้นฉบับ) */
+.intro-photo-wrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+}
+
+.intro-photo-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -8px; left: -8px; right: -8px; bottom: -8px;
+  border: 2px solid #e07a5f; /* สีส้มอิฐตามรูป */
+  border-radius: 50%;
+}
+
+.intro-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ข้อความตรงกลาง */
+.intro-content {
+  text-align: center;
+}
+
+.intro-name {
+  font-size: 1.6rem;
+  color: #5d4037;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.intro-pos { font-weight: 500; color: #444; }
+.intro-dept, .intro-contact { color: #777; font-size: 0.95rem; }
+
+/* Quote Icons */
+.quote-icon {
+  font-size: 2rem;
+  color: #e07a5f;
+  opacity: 0.4;
+  margin: 10px;
+}
+
+/* Responsive: มือถือให้เรียงจากบนลงล่างเสมอ */
+@media (max-width: 768px) {
+  .intro-card, .intro-card.right {
+    grid-template-columns: 1fr; /* ให้เหลือคอลัมน์เดียว */
+    text-align: center;
+  }
+  
+  /* บังคับให้รูปอยู่ด้านบนเสมอในมือถือ */
+  .intro-card.right .intro-photo-wrapper {
+    grid-row: 1; 
+  }
+  
+  .intro-photo-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
