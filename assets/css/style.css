@@ -408,6 +408,11 @@ a { color: inherit; text-decoration: none; }
 }
 .news-tag.soft { background: rgba(230, 245, 238, 0.95); }
 .news-meta { display: flex; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: 0.94rem; }
+.news-card img {
+  width: 100%;
+  height: auto;
+}
+
 
 /* ==================================================
    TIMELINE
