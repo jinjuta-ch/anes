@@ -455,7 +455,12 @@
           <p>ระเบียบวาระ รายงานการประชุม และสรุปผลการดำเนินงานรายเดือน</p>
           <a href="#">ดาวน์โหลดตัวอย่าง</a>
         </article>
- <!DOCTYPE html>
+
+    <!-- =========================
+      CONTACT SECTION
+      ช่องทางติดต่อ / แผนที่ / ข้อมูลเพิ่มเติม
+    ========================== -->
+    <!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
@@ -469,33 +474,27 @@
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
-      background: #f5f7fb;
     }
 
-    /* SECTION */
+    /* SECTION เต็มจอ */
     #contact {
-      padding: 60px 20px;
-      background: #eef2ff;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* GRID */
-    .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      grid-template-columns: 1fr 1fr; /* ซ้าย-ขวา */
+      min-height: 100vh;
     }
 
-    /* CONTACT CARD */
+    /* LEFT: CONTACT */
+    .contact-left {
+      background: #eef2ff;
+      padding: 60px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .contact-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      max-width: 500px;
+      width: 100%;
     }
 
     .section-kicker {
@@ -505,6 +504,7 @@
 
     h2 {
       margin: 10px 0 20px;
+      font-size: 32px;
     }
 
     .contact-list {
@@ -517,10 +517,12 @@
       display: flex;
       gap: 10px;
       align-items: center;
+      font-size: 15px;
     }
 
     .contact-list i {
       color: #4e73df;
+      font-size: 18px;
     }
 
     .contact-list a {
@@ -532,19 +534,26 @@
       color: #4e73df;
     }
 
-    /* MAP */
-    .map-box iframe {
-      width: 100%;       /* เต็มกรอบ */
-      height: 100%;      
-      min-height: 400px; /* ความสูงขั้นต่ำ */
+    /* RIGHT: MAP */
+    .contact-right {
+      width: 100%;
+      height: 100%;
+    }
+
+    .contact-right iframe {
+      width: 100%;
+      height: 100%;
       border: 0;
-      border-radius: 16px;
     }
 
     /* MOBILE */
     @media (max-width: 768px) {
-      .contact-grid {
+      #contact {
         grid-template-columns: 1fr;
+      }
+
+      .contact-right {
+        height: 400px;
       }
     }
   </style>
@@ -553,10 +562,11 @@
 <body>
 
 <section id="contact">
-  <div class="container contact-grid">
 
-    <!-- ซ้าย: ข้อมูล -->
+  <!-- LEFT -->
+  <div class="contact-left">
     <div class="contact-card">
+
       <span class="section-kicker">CONTACT</span>
       <h2>ติดต่อเรา</h2>
 
@@ -581,18 +591,19 @@
           <a href="mailto:uph@up.ac.th">uph@up.ac.th</a>
         </li>
       </ul>
-    </div>
 
-    <!-- ขวา: แผนที่ (ใช้ iframe ของคุณ) -->
-    <div class="map-box">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.7124706871987!2d99.91735287520429!3d19.032387582163302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d83343eeca0455%3A0x27bd02200df7e4f1!5e0!3m2!1sth!2sth!4v1774780900872!5m2!1sth!2sth"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
     </div>
-
   </div>
+
+  <!-- RIGHT -->
+  <div class="contact-right">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.7124706871987!2d99.91735287520429!3d19.032387582163302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d83343eeca0455%3A0x27bd02200df7e4f1!5e0!3m2!1sth!2sth!4v1774780900872!5m2!1sth!2sth"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
 </section>
 
 </body>
