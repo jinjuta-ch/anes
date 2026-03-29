@@ -1,47 +1,38 @@
 <script>
-  // ใช้ DOMContentLoaded เพื่อให้แน่ใจว่า HTML โหลดเสร็จก่อนสคริปต์ทำงาน
   document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menuToggle');
     const siteNav = document.getElementById('siteNav');
 
-    // ตรวจสอบว่ามีปุ่มและเมนูอยู่ในหน้านี้จริงหรือไม่ (ป้องกัน Error)
     if (menuToggle && siteNav) {
-      
-      // เมื่อคลิกปุ่ม Hamburger
       menuToggle.addEventListener('click', (e) => {
-        // ป้องกันการทำงานซ้ำซ้อน
-        e.stopPropagation(); 
+        e.stopPropagation();
         
+        // สลับคลาส 'active' (ต้องตรงกับใน CSS)
         siteNav.classList.toggle('active');
         
+        // เปลี่ยนไอคอน
         const icon = menuToggle.querySelector('i');
-        if (icon) {
-          if (siteNav.classList.contains('active')) {
-            icon.classList.replace('fa-bars', 'fa-xmark');
-          } else {
-            icon.classList.replace('fa-xmark', 'fa-bars');
-          }
+        if (siteNav.classList.contains('active')) {
+          icon.classList.replace('fa-bars', 'fa-xmark');
+        } else {
+          icon.classList.replace('fa-xmark', 'fa-bars');
         }
       });
 
-      // เมื่อคลิกที่ลิงก์เมนู ให้ปิดเมนูอัตโนมัติ
+      // คลิกที่ลิงก์แล้วให้เมนูหุบเก็บ
       const navLinks = document.querySelectorAll('.site-nav a');
       navLinks.forEach(link => {
         link.addEventListener('click', () => {
           siteNav.classList.remove('active');
-          const icon = menuToggle.querySelector('i');
-          if (icon) {
-            icon.classList.replace('fa-xmark', 'fa-bars');
-          }
+          menuToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
         });
       });
 
-      // (เพิ่มเติม) คลิกที่อื่นบนหน้าจอให้เมนูหุบเก็บเอง
+      // คลิกที่อื่นข้างนอกเมนูให้ปิดเมนู
       document.addEventListener('click', (e) => {
         if (!siteNav.contains(e.target) && !menuToggle.contains(e.target)) {
           siteNav.classList.remove('active');
-          const icon = menuToggle.querySelector('i');
-          if (icon) icon.classList.replace('fa-xmark', 'fa-bars');
+          const icon = menuToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
         }
       });
     }
