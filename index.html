@@ -192,19 +192,128 @@
           <a href="#contact" class="text-link">แจ้งแก้ไขข่าว <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <div class="news-grid">
-          <article class="news-card featured-news">
-            <div class="news-tag">ข่าวล่าสุด</div>
-            
-            <p>
-              หน้าเว็บไซต์นี้ถูกจัดทำขึ้นเพื่อเป็นต้นแบบการนำเสนอข้อมูลหน่วยงาน เช่น ข่าวประชาสัมพันธ์
-              ตารางกิจกรรม ช่องทางติดต่อ และเอกสารดาวน์โหลด โดยคุณสามารถแก้ข้อความ รูปภาพ ลิงก์ และจำนวนกล่องข่าวได้ภายหลัง
-            </p>
-            <div class="news-meta">
-              <span><i class="fa-regular fa-calendar"></i> อัปเดตตัวอย่าง: 18 มีนาคม 2026</span>
-              <span><i class="fa-regular fa-folder-open"></i> Demo Content</span>
-            </div>
-          </article>
+        <d<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Section</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f5f7fb;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    /* GRID */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    /* CARD */
+    .news-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .news-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+
+    /* IMAGE */
+    .news-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* TAG */
+    .news-tag {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: red;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+
+    /* CONTENT */
+    .news-content {
+      padding: 20px;
+    }
+
+    .news-content p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* META */
+    .news-meta {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #777;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="news-grid">
+
+    <article class="news-card featured-news">
+
+      <!-- ป้ายข่าว -->
+      <div class="news-tag">ข่าวล่าสุด</div>
+
+      <!-- รูปภาพ (อยู่ก่อนวันที่) -->
+      <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c" alt="news image">
+
+      <!-- เนื้อหา -->
+      <div class="news-content">
+        <p>
+          ตัวอย่างเนื้อหาข่าว สามารถใส่รายละเอียดข่าวประชาสัมพันธ์ หรือข้อมูลต่าง ๆ ได้ที่นี่
+        </p>
+
+        <!-- วันที่ -->
+        <div class="news-meta">
+          <span><i class="fa-regular fa-calendar"></i> ข้อมูลวันที่: 20 มีนาคม 2026</span>
+          <span><i class="fa-regular fa-folder-open"></i> Demo Content</span>
+        </div>
+      </div>
+
+    </article>
+
+  </div>
+
+</div>
+
+</body>
+</html>
 
           <article class="news-card">
             <div class="news-tag soft">ประชาสัมพันธ์</div>
@@ -215,9 +324,6 @@
         </div>
       </div>
     </section>
-
-    
-
     <!-- =========================
       DOCUMENT CATEGORY SECTION
       หมวดหมู่เอกสาร / ดาวน์โหลด
@@ -367,14 +473,6 @@
 
     </div>
   </section>
-
-</body>
-</html>
-          
-      
-        </div>
-      </div>
-    </section>
 
     <!-- =========================
       CONTACT SECTION
