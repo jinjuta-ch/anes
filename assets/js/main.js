@@ -64,3 +64,29 @@ setInterval(() => {
 // init
 updateSlider();
 
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const siteNav = document.getElementById('siteNav');
+
+  // เมื่อคลิกปุ่ม Hamburger
+  menuToggle.addEventListener('click', () => {
+    siteNav.classList.toggle('active'); // สลับการเพิ่ม/ลบคลาส 'active'
+    
+    // เปลี่ยนไอคอนจาก ขีด (bars) เป็น กากบาท (xmark)
+    const icon = menuToggle.querySelector('i');
+    if (siteNav.classList.contains('active')) {
+      icon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+      icon.classList.replace('fa-xmark', 'fa-bars');
+    }
+  });
+
+  // เมื่อคลิกที่ลิงก์เมนู ให้ปิดเมนูอัตโนมัติ (สำหรับหน้าแบบ Single Page)
+  const navLinks = document.querySelectorAll('.site-nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      siteNav.classList.remove('active');
+      menuToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+    });
+  });
+</script>
