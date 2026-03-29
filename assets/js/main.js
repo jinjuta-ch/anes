@@ -63,3 +63,12 @@ setInterval(() => {
 
 // init
 updateSlider();
+
+// ปุ่มกลับด้านบนแบบ Smooth
+document.getElementById("backToTop").addEventListener("click", function(e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
