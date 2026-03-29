@@ -455,23 +455,149 @@
           <p>ระเบียบวาระ รายงานการประชุม และสรุปผลการดำเนินงานรายเดือน</p>
           <a href="#">ดาวน์โหลดตัวอย่าง</a>
         </article>
-    <!-- =========================
-      CONTACT SECTION
-      ช่องทางติดต่อ / แผนที่ / ข้อมูลเพิ่มเติม
-    ========================== -->
-    <section class="section" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-card glass-card">
-          <span class="section-kicker">CONTACT</span>
-          <h2>ติดต่อเรา</h2>
-          <ul class="contact-list">
-            <li><i class="fa-solid fa-location-dot"></i> 19/1 หมู่ 2 ถ.พหลโยธิน ต.แม่กา อ.เมืองพะเยา จ.พะเยา 56000</li>
-            <li><i class="fa-solid fa-phone"></i> โทรศัพท์กลาง 0 5446 6666 ต่อ 7003</li>
-            <li><i class="fa-solid fa-fax"></i> โทรสาร 0 5446 6759</li>
-            <li><i class="fa-solid fa-envelope"></i> uph@up.ac.th</li>
-          </ul>
-        </div>
-  </main>
+ <!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact + Map</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f5f7fb;
+    }
+
+    /* SECTION */
+    #contact {
+      padding: 60px 20px;
+      background: #eef2ff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* GRID */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .section-kicker {
+      font-size: 14px;
+      color: #888;
+    }
+
+    h2 {
+      margin: 10px 0 20px;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-list li {
+      margin: 15px 0;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .contact-list i {
+      color: #4e73df;
+    }
+
+    .contact-list a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .contact-list a:hover {
+      color: #4e73df;
+    }
+
+    /* MAP */
+    .map-box iframe {
+      width: 100%;       /* เต็มกรอบ */
+      height: 100%;      
+      min-height: 400px; /* ความสูงขั้นต่ำ */
+      border: 0;
+      border-radius: 16px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<section id="contact">
+  <div class="container contact-grid">
+
+    <!-- ซ้าย: ข้อมูล -->
+    <div class="contact-card">
+      <span class="section-kicker">CONTACT</span>
+      <h2>ติดต่อเรา</h2>
+
+      <ul class="contact-list">
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          19/1 หมู่ 2 ถ.พหลโยธิน ต.แม่กา อ.เมืองพะเยา จ.พะเยา 56000
+        </li>
+
+        <li>
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+6654466666">054-466-666 ต่อ 7003</a>
+        </li>
+
+        <li>
+          <i class="fa-solid fa-fax"></i>
+          054-466-759
+        </li>
+
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:uph@up.ac.th">uph@up.ac.th</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ขวา: แผนที่ (ใช้ iframe ของคุณ) -->
+    <div class="map-box">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.7124706871987!2d99.91735287520429!3d19.032387582163302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d83343eeca0455%3A0x27bd02200df7e4f1!5e0!3m2!1sth!2sth!4v1774780900872!5m2!1sth!2sth"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
+
   <!-- =========================
     FOOTER SECTION
     ส่วนท้ายเว็บไซต์
