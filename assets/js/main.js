@@ -1,92 +1,49 @@
-/* ==================================================
-   MAIN JS
-   - ควบคุมเมนูมือถือ
-   - ปรับ aria-expanded เพื่อ accessibility
-================================================== */
-const navToggle = document.getElementById('navToggle');
-const siteNav = document.getElementById('siteNav');
-
-if (navToggle && siteNav) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = siteNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  siteNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 860) {
-        siteNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  });
-}
-let index = 0;
-
-const track = document.getElementById("sliderTrack");
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll("#sliderDots span");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-
-function updateSlider() {
-  track.style.transform = `translateX(-${index * 100}%)`;
-
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[index].classList.add("active");
-}
-
-// ปุ่ม
-nextBtn.addEventListener("click", () => {
-  index = (index + 1) % slides.length;
-  updateSlider();
-});
-
-prevBtn.addEventListener("click", () => {
-  index = (index - 1 + slides.length) % slides.length;
-  updateSlider();
-});
-
-// dot
-dots.forEach(dot => {
-  dot.addEventListener("click", (e) => {
-    index = parseInt(e.target.dataset.slide);
-    updateSlider();
-  });
-});
-
-// auto slide
-setInterval(() => {
-  index = (index + 1) % slides.length;
-  updateSlider();
-}, 5000);
-
-// init
-updateSlider();
-
 <script>
-  const menuToggle = document.getElementById('menuToggle');
-  const siteNav = document.getElementById('siteNav');
+  // ใช้ DOMContentLoaded เพื่อให้แน่ใจว่า HTML โหลดเสร็จก่อนสคริปต์ทำงาน
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const siteNav = document.getElementById('siteNav');
 
-  // เมื่อคลิกปุ่ม Hamburger
-  menuToggle.addEventListener('click', () => {
-    siteNav.classList.toggle('active'); // สลับการเพิ่ม/ลบคลาส 'active'
-    
-    // เปลี่ยนไอคอนจาก ขีด (bars) เป็น กากบาท (xmark)
-    const icon = menuToggle.querySelector('i');
-    if (siteNav.classList.contains('active')) {
-      icon.classList.replace('fa-bars', 'fa-xmark');
-    } else {
-      icon.classList.replace('fa-xmark', 'fa-bars');
+    // ตรวจสอบว่ามีปุ่มและเมนูอยู่ในหน้านี้จริงหรือไม่ (ป้องกัน Error)
+    if (menuToggle && siteNav) {
+      
+      // เมื่อคลิกปุ่ม Hamburger
+      menuToggle.addEventListener('click', (e) => {
+        // ป้องกันการทำงานซ้ำซ้อน
+        e.stopPropagation(); 
+        
+        siteNav.classList.toggle('active');
+        
+        const icon = menuToggle.querySelector('i');
+        if (icon) {
+          if (siteNav.classList.contains('active')) {
+            icon.classList.replace('fa-bars', 'fa-xmark');
+          } else {
+            icon.classList.replace('fa-xmark', 'fa-bars');
+          }
+        }
+      });
+
+      // เมื่อคลิกที่ลิงก์เมนู ให้ปิดเมนูอัตโนมัติ
+      const navLinks = document.querySelectorAll('.site-nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          siteNav.classList.remove('active');
+          const icon = menuToggle.querySelector('i');
+          if (icon) {
+            icon.classList.replace('fa-xmark', 'fa-bars');
+          }
+        });
+      });
+
+      // (เพิ่มเติม) คลิกที่อื่นบนหน้าจอให้เมนูหุบเก็บเอง
+      document.addEventListener('click', (e) => {
+        if (!siteNav.contains(e.target) && !menuToggle.contains(e.target)) {
+          siteNav.classList.remove('active');
+          const icon = menuToggle.querySelector('i');
+          if (icon) icon.classList.replace('fa-xmark', 'fa-bars');
+        }
+      });
     }
-  });
-
-  // เมื่อคลิกที่ลิงก์เมนู ให้ปิดเมนูอัตโนมัติ (สำหรับหน้าแบบ Single Page)
-  const navLinks = document.querySelectorAll('.site-nav a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      siteNav.classList.remove('active');
-      menuToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
-    });
   });
 </script>
