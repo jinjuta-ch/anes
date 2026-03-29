@@ -2,7 +2,19 @@
   document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menuToggle');
     const siteNav = document.getElementById('siteNav');
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const siteNav = document.getElementById('siteNav');
 
+  menuToggle.addEventListener('click', () => {
+    siteNav.classList.toggle('active'); // สลับการแสดงผลเมนู
+    
+    // เปลี่ยนไอคอนระหว่าง ขีด กับ กากบาท
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+  });
+</script>
     if (menuToggle && siteNav) {
       menuToggle.addEventListener('click', (e) => {
         e.stopPropagation();

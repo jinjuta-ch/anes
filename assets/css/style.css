@@ -83,22 +83,50 @@ a { color: inherit; text-decoration: none; transition: 0.3s; }
 .brand-text small { font-size: 0.8rem; color: #6b7280; }
 
 /* Desktop Nav */
-.site-nav ul {
-  display: flex; gap: 24px; list-style: none; margin: 0; padding: 0;
-}
-.site-nav a {
-  font-weight: 600; color: #4b5563; position: relative; padding: 8px 0;
-}
-.site-nav a::after {
-  content: ""; position: absolute; left: 0; bottom: 0;
-  width: 0%; height: 2px; background: var(--secondary-strong); transition: 0.3s;
-}
-.site-nav a:hover::after { width: 100%; }
-
-/* Hamburger Toggle */
+/* --- Desktop: ซ่อนปุ่ม 3 ขีด --- */
 .menu-toggle {
-  display: none; background: none; border: none;
-  font-size: 1.5rem; color: var(--primary-deep); cursor: pointer;
+  display: none; /* ซ่อนถาวรในหน้าจอใหญ่ */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* --- Mobile: ปรับแต่งการแสดงผล (ต่ำกว่า 860px) --- */
+@media (max-width: 860px) {
+  .menu-toggle {
+    display: block; /* แสดงปุ่ม 3 ขีดเฉพาะในมือถือ */
+  }
+
+  .site-nav {
+    display: none; /* ซ่อนเมนูไว้ก่อน */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  /* คลาสที่จะถูกเติมด้วย JS เพื่อให้เมนูกางออก */
+  .site-nav.active {
+    display: block;
+  }
+
+  .site-nav ul {
+    flex-direction: column; /* เรียงเมนูเป็นแนวตั้ง */
+    gap: 0;
+  }
+
+  .site-nav ul li a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
 }
 
 /* ==================================================
