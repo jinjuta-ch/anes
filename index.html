@@ -4,567 +4,253 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>งานพยาบาลวิสัญญี | โรงพยาบาลมหาวิทยาลัยพะเยา</title>
-  <meta name="description" content="เว็บไซต์งานการพยาบาลวิสัญญี โรงพยาบาลมหาวิทยาลัยพะเยา ออกแบบสมัยใหม่ เรียบหรู รองรับมือถือและปรับแต่งต่อได้" />
-  <meta name="keywords" content="งานการพยาบาลวิสัญญี, Anes, โรงพยาบาลมหาวิทยาลัยพะเยา, University of Phayao Hospital" />
+  <meta name="description" content="เว็บไซต์งานการพยาบาลวิสัญญี โรงพยาบาลมหาวิทยาลัยพะเยา ออกแบบสมัยใหม่ เรียบหรู" />
+  <meta name="keywords" content="งานการพยาบาลวิสัญญี, Anes, โรงพยาบาลมหาวิทยาลัยพะเยา" />
   <meta name="theme-color" content="#e8fff6" />
-  <meta property="og:title" content="งานพยาบาลวิสัญญี | โรงพยาบาลมหาวิทยาลัยพะเยา" />
-  <meta property="og:description" content="หน้าเว็บไซต์หน่วยงานการพยาบาลวิสัญญี" />
-  <meta property="og:type" content="website" />
+
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8+q46cDfLr9P7k9RwhKkMHpvLbHG9SrA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Base Styles --- */
+    :root {
+      --primary-color: #4e73df;
+      --secondary-color: #7c3aed;
+      --bg-light: #f5f7fb;
+      --text-dark: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Bai+Jamjuree', 'Prompt', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    a { text-decoration: none; transition: 0.3s; }
+
+    /* --- Header & Nav --- */
+    .site-header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; color: inherit; }
+    .brand-logo { height: 50px; }
+    .brand-text strong { font-size: 1.2rem; color: var(--primary-color); }
+    .site-nav ul { display: flex; list-style: none; gap: 20px; margin: 0; }
+    .site-nav a { color: #555; font-weight: 500; }
+    .site-nav a:hover { color: var(--primary-color); }
+
+    /* --- Hero Section --- */
+    .hero-section { padding: 60px 0; background: #e8fff6; text-align: center; }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      display: inline-block;
+      max-width: 800px;
+    }
+    .btn {
+      padding: 12px 25px;
+      border-radius: 30px;
+      display: inline-block;
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    /* --- Slider --- */
+    .hero-slider { position: relative; overflow: hidden; margin: 20px 0; border-radius: 15px; }
+    .slider-track { display: flex; transition: 0.5s; }
+    .slide img { width: 100%; height: auto; display: block; }
+    .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; padding: 15px; cursor: pointer; }
+    .next { right: 0; }
+
+    /* --- About & Info Cards --- */
+    .section { padding: 60px 0; }
+    .section-heading { text-align: center; margin-bottom: 40px; }
+    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+    .info-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
+    .card-icon { font-size: 40px; color: var(--primary-color); margin-bottom: 15px; }
+
+    /* --- News Section --- */
+    .news-grid { display: flex; justify-content: center; padding: 20px 0; }
+    .news-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.05); position: relative; max-width: 600px; width: 100%; }
+    .news-tag { position: absolute; top: 15px; left: 15px; background: red; color: #fff; padding: 6px 12px; border-radius: 8px; font-size: 12px; z-index: 1; }
+    .news-card img { width: 100%; height: auto; }
+    .news-content { padding: 20px; }
+
+    /* --- Document Grid --- */
+    .doc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 30px; }
+    .doc-card { background: #fff; padding: 25px; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+    .doc-card:hover { transform: translateY(-8px); }
+    .doc-card i { font-size: 40px; color: var(--primary-color); margin-bottom: 15px; }
+    .doc-card a { display: inline-block; padding: 8px 16px; background: var(--primary-color); color: #fff; border-radius: 8px; }
+
+    /* --- Footer --- */
+    .footer { background: linear-gradient(135deg, #c4b5fd, #ffffff); color: #4c1d95; padding: 40px 0; margin-top: 60px; }
+    .contact-info { margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; }
+    .contact-item { display: flex; align-items: center; gap: 8px; background: #fff; padding: 10px 15px; border-radius: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+    @media (max-width: 768px) {
+      .site-nav { display: none; } /* ควรมี JS สำหรับ toggle เมนูมือถือ */
+      .header-inner { flex-direction: column; gap: 15px; }
+    }
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหาหลัก</a>
 
-  <!-- =========================
-    MENU HEADER SECTION
-    เมนูหลักของเว็บไซต์
-  ========================== -->
- <!-- =========================
-   HEADER (SINGLE HEADER)
-   ใช้แทน topbar + header เดิม
-========================== -->
-<header class="site-header" id="top">
-  <div class="container header-inner">
-
-    <!-- LOGO + TITLE -->
-    <a href="index.html" class="brand" aria-label="หน้าแรก งานการพยาบาลวิสัญญี">
-      <span class="brand-mark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
         <img src="assets/img/ตรารพ.png" alt="โลโก้" class="brand-logo">
-      </span>
+        <span class="brand-text">
+          <strong>Anesthesia Unit</strong><br>
+          <small>University of Phayao Hospital</small>
+        </span>
+      </a>
 
-      <span class="brand-text">
-        <strong>Anesthesia Unit</strong>
-        <small><br>University of Phayao Hospital</small>
-      </span>
-    </a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#aboutme">เกี่ยวกับหน่วยงาน</a></li>
+          <li><a href="pahr/personel.html">บุคลากร</a></li>
+          <li><a href="#news">ข่าวประชาสัมพันธ์</a></li>
+          <li><a href="#downloads">ดาวน์โหลด</a></li>
+          <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- MENU BUTTON (มือถือ) -->
-    <button class="nav-toggle" id="navToggle"
-      aria-label="เปิดหรือปิดเมนู"
-      aria-expanded="false"
-      aria-controls="siteNav">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-
-    <!-- NAV MENU -->
-    <nav class="site-nav" id="siteNav" aria-label="เมนูหลัก">
-      <ul>
-        <li><a href="#aboutme">เกี่ยวกับหน่วยงาน</a></li>
-        <li><a href="pahr/personel.html">บุคลากร</a></li>
-        <li><a href="#news">ข่าวประชาสัมพันธ์</a></li>
-        <li><a href="#downloads">ดาวน์โหลด</a></li>
-        <li><a href="#contact">ติดต่อเรา</a></li>
-      </ul>
-    </nav>
-
-  </div>
-</header>
   <main id="main-content">
-    <!-- =========================
-      HERO SIDEBAR SECTION
-      ส่วนแนะนำหน่วยงาน พร้อม CTA และข้อมูลเด่น
-    ========================== -->
+    
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-copy glass-card">
+          <span class="eyebrow" style="color: var(--secondary-color); font-weight: bold;">Department of Anesthesia</span>
+          <h1>งานการพยาบาลวิสัญญี</h1>
+          <p>ยินดีต้อนรับเข้าสู่งานการพยาบาลวิสัญญี โรงพยาบาลมหาวิทยาลัยพะเยา</p>
+          <div class="hero-actions">
+            <a class="btn" href="#news"><i class="fa-regular fa-newspaper"></i> ดูข่าวล่าสุด</a>
+          </div>
+        </div>
 
-<section class="hero-section full-hero">
-  <!-- FULL WIDTH TEXT -->
-  <div class="hero-full">
-    <div class="hero-copy glass-card">
-
-      <span class="eyebrow">Department of Anesthesia</span>
-
-      <h1>งานการพยาบาลวิสัญญี</h1>
-
-      <p>
-        ยินดีต้อนรับเข้าสู่งานการพยาบาลวิสัญญี โรงพยาบาลมหาวิทยาลัยพะเยา
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#news">
-          <i class="fa-regular fa-newspaper"></i> ดูข่าวล่าสุด
-        </a>
+        <div class="hero-slider">
+          <div class="slider-track">
+            <div class="slide"><img src="assets/img/banner1.jpg" alt="ห้องผ่าตัด"></div>
+          </div>
+          <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-
-<!-- =========================
-   HERO SLIDER SECTION
-========================== -->
-<section class="hero-slider-section">
-
-  <div class="hero-slider">
-
-    <!-- SLIDES -->
-    <div class="slider-track" id="sliderTrack">
-
-      <div class="slide">
-        <img src="assets/img/banner1.jpg" alt="ห้องผ่าตัด">
-      </div>
-
-      <div class="slide">
-        <img src="assets/img/banner2.jpg" alt="ทีมวิสัญญี">
-      </div>
-
-      <div class="slide">
-        <img src="assets/img/banner3.jpg" alt="อุปกรณ์การแพทย์">
-      </div>
-
-    </div>
-
-    <!-- BUTTON -->
-    <button class="slider-btn prev" id="prevBtn">
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-
-    <button class="slider-btn next" id="nextBtn">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <!-- DOT -->
-    <div class="slider-dots" id="sliderDots">
-      <span data-slide="0" class="active"></span>
-      <span data-slide="1"></span>
-      <span data-slide="2"></span>
-    </div>
-
-  </div>
-</section>
-
-    <!-- =========================
-      ABOUT ME SECTION
-      แนะนำหน่วยงาน / วิสัยทัศน์ / ภารกิจ
-    ========================== -->
     <section class="section" id="aboutme">
       <div class="container">
         <div class="section-heading">
-          <span class="section-kicker">ABOUT US</span>
           <h2>เกี่ยวกับหน่วยงาน</h2>
         </div>
-
         <div class="about-grid">
           <article class="info-card">
             <div class="card-icon"><i class="fa-solid fa-user-nurse"></i></div>
             <h3>บทบาทของหน่วยงาน</h3>
-            <p>
-              ให้บริการระงับความรู้สึกตลอด 24 ชั่วโมง แก่ผู้ป่วยที่เข้ารับการผ่าตัดและ
-การตรวจพิเศษทางกล้อง โดยให้บริการระงับความรู้สึกแบบทั่วร่างกายและการระงับความรู้สึก
-แบบเฉพาะส่วน รวมทั้งการเฝ้าระวังผู้ป่วยโดยบุคลากรทางวิสัญญี
-            </p>
+            <p>ให้บริการระงับความรู้สึกตลอด 24 ชั่วโมง แก่ผู้ป่วยที่เข้ารับการผ่าตัดและการตรวจพิเศษทางกล้อง</p>
           </article>
-
           <article class="info-card">
             <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
             <h3>เป้าหมาย</h3>
-            <p>
-              เพื่อให้บริการระงับความรู้สึกที่ได้คุณภาพตามมาตรฐานวิชาชีพ ปฏิบัติงาน
-ร่วมกับทีมสหสาขาวิชาชีพแบบองค์รวม โดยเน้นผู้รับบริการเป็นศูนย์กลาง เพื่อให้ผู้รับบริการ
-ปลอดภัยและพึงพอใจ
-            </p>
+            <p>เพื่อให้บริการระงับความรู้สึกที่ได้คุณภาพตามมาตรฐานวิชาชีพ ปลอดภัยและพึงพอใจ</p>
           </article>
-
           <article class="info-card">
             <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
             <h3>ขอบเขตการให้บริการ</h3>
-            <p>
-              ให้บริการระงับความรู้สึกแก่ผู้ป่วยนอกและผู้ป่วยในที่เข้ารับการผ่าตัดและการตรวจพิเศษ
-ทางกล้อง ทั้งในภาวะปกติและฉุกเฉิน ทุกกลุ่มอายุตลอด 24 ชั่วโมง
-            </p>
+            <p>ครอบคลุมการผ่าตัดและการตรวจพิเศษทางกล้อง ทั้งภาวะปกติและฉุกเฉิน ทุกกลุ่มอายุตลอด 24 ชั่วโมง</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- =========================
-      NEWS SECTION
-      ข่าวประชาสัมพันธ์แบบกล่อง + ข่าวล่าสุด
-    ========================== -->
-    <section class="section section-alt" id="news">
+    <section class="section" id="news" style="background: #fff;">
       <div class="container">
-        <div class="section-heading two-col-head">
-          <div>
-            <span class="section-kicker">NEWS & UPDATES</span>
-            <h2>ข่าวประชาสัมพันธ์</h2>
-          
-          </div>
-          <a href="#contact" class="text-link">แจ้งแก้ไขข่าว <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="section-heading">
+          <h2>ข่าวประชาสัมพันธ์</h2>
         </div>
-
-        <d></d><!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News Section</title>
-
-  <!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News Poster</title>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: #f5f7fb;
-    }
-
-    .container {
-      max-width: 1100px;   /* จำกัดความกว้างเว็บ */
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .news-grid {
-      display: flex;
-      justify-content: center;
-    }
-
-    /* CARD */
-    .news-card {
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      position: relative;
-      max-width: 600px;   /* จำกัดขนาดการ์ด */
-      width: 100%;
-    }
-
-    /* TAG */
-    .news-tag {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background: red;
-      color: #fff;
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 12px;
-      z-index: 1;
-    }
-
-    /* IMAGE */
-    .news-card img {
-      width: 100%;        /* ✅ ย่อ-ขยายตามจอ */
-      height: auto;       /* ✅ รักษาสัดส่วน */
-      display: block;
-    }
-
-    /* CONTENT */
-    .news-content {
-      padding: 20px;
-    }
-
-    .news-content p {
-      font-size: 15px;
-      color: #444;
-      margin-bottom: 15px;
-    }
-
-    /* META */
-    .news-meta {
-      font-size: 13px;
-      color: #777;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-  </style>
-</head>
-
-<body>
-
-<div class="container">
-
-  <div class="news-grid">
-
-    <article class="news-card featured-news">
-
-      <div class="news-tag">ข่าวล่าสุด</div>
-
-      <!-- ใช้รูปขนาด 1080px -->
-      <img src="assets/img/MH poster.png" alt="news image">
-
-      <div class="news-content">
-        <p>
-          ภาวะ Malignant Hyperthermia หรือ MH พบไม่บ่อย แต่อันตรายถึงชีวิต
-        </p>
-
-        <div class="news-meta">
-          <span><i class="fa-regular fa-calendar"></i> ข้อมูลวันที่: 20 มีนาคม 2026</span>
-          <span><i class="fa-regular fa-folder-open"></i></span>
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-tag">ข่าวล่าสุด</div>
+            <img src="assets/img/MH poster.png" alt="ข่าว MH">
+            <div class="news-content">
+              <p>ภาวะ Malignant Hyperthermia หรือ MH พบไม่บ่อย แต่อันตรายถึงชีวิต</p>
+              <div style="font-size: 13px; color: #777;">
+                <span><i class="fa-regular fa-calendar"></i> 20 มีนาคม 2026</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-    </article>
-
-  </div>
-
-</div>
-
-</body>
-</html>
-
-    <!-- =========================
-      DOCUMENT CATEGORY SECTION
-      หมวดหมู่เอกสาร / ดาวน์โหลด
-    ========================== -->
-    <!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document Categories</title>
-
- 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: #f5f7fb;
-    }
-
-    /* SECTION */
-    #downloads {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      width: 100%;
-      text-align: center;
-    }
-
-    /* HEADER */
-    .section-heading {
-      margin-bottom: 40px;
-    }
-
-    .section-kicker {
-      display: block;
-      font-size: 14px;
-      color: #6c757d;
-      letter-spacing: 1px;
-    }
-
-    .section-heading h2 {
-      margin: 10px 0 0;
-      font-size: 32px;
-    }
-
-    /* GRID */
-    .doc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
-      justify-content: center;
-      gap: 25px;
-    }
-
-    /* CARD */
-    .doc-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
-
-    .doc-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    }
-
-    .doc-card i {
-      font-size: 40px;
-      color: #4e73df;
-      margin-bottom: 15px;
-    }
-
-    .doc-card h3 {
-      margin: 10px 0;
-      font-size: 20px;
-    }
-
-    .doc-card p {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 15px;
-    }
-
-    .doc-card a {
-      display: inline-block;
-      padding: 8px 16px;
-      background: #4e73df;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    .doc-card a:hover {
-      background: #2e59d9;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- =========================
-      DOCUMENT CATEGORY SECTION
-  ========================== -->
-  <section id="downloads">
-    <div class="container">
-
-      <div class="section-heading">
-        <span class="section-kicker">DOCUMENT CATEGORIES</span>
-        <h2>หมวดหมู่เอกสาร</h2>
-      </div>
-
-      <div class="doc-grid">
-
-        <article class="doc-card">
-          <i class="fa-regular fa-file-lines"></i>
-          <h3>แบบฟอร์มหน่วยงาน</h3>
-          <p>แบบฟอร์มบันทึกการพยาบาล แบบประเมิน และเอกสารใช้งานภายใน</p>
-          <a href="#">ดาวน์โหลดตัวอย่าง</a>
-        </article>
-
-        <article class="doc-card">
-          <i class="fa-regular fa-file-pdf"></i>
-          <h3>คู่มือการให้บริการ</h3>
-          <p>เอกสารแนะนำผู้ป่วย</p>
-          <a href="#">ดาวน์โหลดตัวอย่าง</a>
-        </article>
-
-        <article class="doc-card">
-          <i class="fa-regular fa-file-word"></i>
-          <h3>เอกสารประชุม</h3>
-          <p>ระเบียบวาระ รายงานการประชุม และสรุปผลการดำเนินงานรายเดือน</p>
-          <a href="#">ดาวน์โหลดตัวอย่าง</a>
-        </article>
-
-        <!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Footer Design</title>
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-    body {
-        margin: 0;
-        font-family: 'Prompt', sans-serif;
-    }
-
-    .footer {
-        background: linear-gradient(135deg, #c4b5fd, #ffffff);
-        color: #4c1d95;
-        padding: 40px 20px;
-    }
-
-    .footer-container {
-        max-width: 1100px;
-        margin: auto;
-        text-align: center;
-    }
-
-    .footer h3 {
-        margin-bottom: 15px;
-        font-weight: 500;
-    }
-
-    .footer p {
-        margin: 8px 0;
-        line-height: 1.6;
-    }
-
-    .contact-info {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 25px;
-    }
-
-    .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background: #ffffff;
-        padding: 10px 15px;
-        border-radius: 30px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        transition: 0.3s;
-    }
-
-    .contact-item:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-
-    .contact-item i {
-        color: #7c3aed;
-    }
-
-    @media (max-width: 600px) {
-        .contact-info {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-</style>
-</head>
-
-<body>
-
-<footer class="footer">
-    <div class="footer-container">
-
-        <h3>ติดต่อเรา</h3>
-
-        <p>
-            โรงพยาบาลมหาวิทยาลัยพะเยา<br>
-            19/1 หมู่ที่ 2 ถนนพหลโยธิน ตำบลแม่กา อำเภอเมือง จังหวัดพะยา 56000<br>
-        </p>
-
-        <div class="contact-info">
-            <div class="contact-item">
-                <i class="fa fa-phone"></i>
-                <span>054466666 ต่อ 7000</span>
-            </div>
-
-            <div class="contact-item">
-                <i class="fa fa-fax"></i>
-                <span>https:uph.up.ac.th</span>
-            </div>
-
-            <div class="contact-item">
-                <i class="fa fa-envelope"></i>
-                <span>anesup2020@gmail.com</span>
-            </div>
+    <section class="section" id="downloads">
+      <div class="container">
+        <div class="section-heading">
+          <h2>หมวดหมู่เอกสาร</h2>
         </div>
+        <div class="doc-grid">
+          <article class="doc-card">
+            <i class="fa-regular fa-file-lines"></i>
+            <h3>แบบฟอร์มหน่วยงาน</h3>
+            <p>แบบฟอร์มบันทึกการพยาบาล แบบประเมิน</p>
+            <a href="#">ดาวน์โหลด</a>
+          </article>
+          <article class="doc-card">
+            <i class="fa-regular fa-file-pdf"></i>
+            <h3>คู่มือการให้บริการ</h3>
+            <p>เอกสารแนะนำผู้ป่วย</p>
+            <a href="#">ดาวน์โหลด</a>
+          </article>
+          <article class="doc-card">
+            <i class="fa-regular fa-file-word"></i>
+            <h3>เอกสารประชุม</h3>
+            <p>ระเบียบวาระ และรายงานการประชุม</p>
+            <a href="#">ดาวน์โหลด</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container" style="text-align: center;">
+      <h3>ติดต่อเรา</h3>
+      <p>
+        โรงพยาบาลมหาวิทยาลัยพะเยา<br>
+        19/1 หมู่ที่ 2 ถนนพหลโยธิน ตำบลแม่กา อำเภอเมือง จังหวัดพะเยา 56000
+      </p>
+      <div class="contact-info">
+        <div class="contact-item"><i class="fa fa-phone"></i> <span>054-466666 ต่อ 7000</span></div>
+        <div class="contact-item"><i class="fa fa-globe"></i> <span>uph.up.ac.th</span></div>
+        <div class="contact-item"><i class="fa fa-envelope"></i> <span>anesup2020@gmail.com</span></div>
+      </div>
     </div>
-</footer>
+  </footer>
 
 </body>
 </html>
