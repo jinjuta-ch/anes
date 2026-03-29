@@ -456,4 +456,116 @@
           <a href="#">ดาวน์โหลดตัวอย่าง</a>
         </article>
 
-        
+        <!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Footer Design</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Prompt', sans-serif;
+    }
+
+    .footer {
+        background: linear-gradient(135deg, #c4b5fd, #ffffff);
+        color: #4c1d95;
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .footer h3 {
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    .footer p {
+        margin: 8px 0;
+        line-height: 1.6;
+    }
+
+    .contact-info {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #ffffff;
+        padding: 10px 15px;
+        border-radius: 30px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        transition: 0.3s;
+    }
+
+    .contact-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-item i {
+        color: #7c3aed;
+    }
+
+    @media (max-width: 600px) {
+        .contact-info {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <h3>ติดต่อเรา</h3>
+
+        <p>
+            15 สาขาวิชาสัญญีวิทยา คณะแพทยศาสตร์<br>
+            มหาวิทยาลัยสงขลานครินทร์<br>
+            ถ.กาญจนวนิช ต.คอหงส์ อ.หาดใหญ่ จ.สงขลา 90110
+        </p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <span>074-451651-2</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa fa-fax"></i>
+                <span>074-281656</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <span>anespsuweb@gmail.com</span>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
