@@ -258,33 +258,154 @@
       DOCUMENT CATEGORY SECTION
       หมวดหมู่เอกสาร / ดาวน์โหลด
     ========================== -->
-    <section class="section section-alt" id="downloads">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">DOCUMENT CATEGORIES</span>
-          <h2>หมวดหมู่เอกสาร</h2>
-         
-        </div>
+    <!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Categories</title>
 
-        <div class="doc-grid">
-          <article class="doc-card">
-            <i class="fa-regular fa-file-lines"></i>
-            <h3>แบบฟอร์มหน่วยงาน</h3>
-            <p>แบบฟอร์มบันทึกการพยาบาล แบบประเมิน และเอกสารใช้งานภายใน</p>
-            <a href="#">ดาวน์โหลดตัวอย่าง</a>
-          </article>
-          <article class="doc-card">
-            <i class="fa-regular fa-file-pdf"></i>
-            <h3>คู่มือการให้บริการ</h3>
-            <p>เอกสารแนะนำผู้ป่วย</p>
-            <a href="#">ดาวน์โหลดตัวอย่าง</a>
-          </article>
-          <article class="doc-card">
-            <i class="fa-regular fa-file-word"></i>
-            <h3>เอกสารประชุม</h3>
-            <p>ระเบียบวาระ รายงานการประชุม และสรุปผลการดำเนินงานรายเดือน</p>
-            <a href="#">ดาวน์โหลดตัวอย่าง</a>
-          </article>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f5f7fb;
+    }
+
+    /* SECTION */
+    #downloads {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* HEADER */
+    .section-heading {
+      margin-bottom: 40px;
+    }
+
+    .section-kicker {
+      display: block;
+      font-size: 14px;
+      color: #6c757d;
+      letter-spacing: 1px;
+    }
+
+    .section-heading h2 {
+      margin: 10px 0 0;
+      font-size: 32px;
+    }
+
+    /* GRID */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+      justify-content: center;
+      gap: 25px;
+    }
+
+    /* CARD */
+    .doc-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .doc-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+
+    .doc-card i {
+      font-size: 40px;
+      color: #4e73df;
+      margin-bottom: 15px;
+    }
+
+    .doc-card h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .doc-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .doc-card a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #4e73df;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .doc-card a:hover {
+      background: #2e59d9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+      DOCUMENT CATEGORY SECTION
+  ========================== -->
+  <section id="downloads">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-kicker">DOCUMENT CATEGORIES</span>
+        <h2>หมวดหมู่เอกสาร</h2>
+      </div>
+
+      <div class="doc-grid">
+
+        <article class="doc-card">
+          <i class="fa-regular fa-file-lines"></i>
+          <h3>แบบฟอร์มหน่วยงาน</h3>
+          <p>แบบฟอร์มบันทึกการพยาบาล แบบประเมิน และเอกสารใช้งานภายใน</p>
+          <a href="#">ดาวน์โหลดตัวอย่าง</a>
+        </article>
+
+        <article class="doc-card">
+          <i class="fa-regular fa-file-pdf"></i>
+          <h3>คู่มือการให้บริการ</h3>
+          <p>เอกสารแนะนำผู้ป่วย</p>
+          <a href="#">ดาวน์โหลดตัวอย่าง</a>
+        </article>
+
+        <article class="doc-card">
+          <i class="fa-regular fa-file-word"></i>
+          <h3>เอกสารประชุม</h3>
+          <p>ระเบียบวาระ รายงานการประชุม และสรุปผลการดำเนินงานรายเดือน</p>
+          <a href="#">ดาวน์โหลดตัวอย่าง</a>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
           
       
         </div>
