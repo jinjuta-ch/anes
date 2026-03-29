@@ -1,165 +1,3 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>บุคลากร | งานการพยาบาลวิสัญญี</title>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* --- 1. ปรับเปลี่ยนชุดสี (Theme Colors) --- */
-    :root {
-      --primary-purple: #a78bfa;    /* สีม่วงอ่อน */
-      --secondary-mint: #8ddbbd;    /* สีเขียวมิ้นท์ */
-      --text-dark: #2d2a4a;         /* สีม่วงเข้มเกือบดำสำหรับข้อความ */
-      --bg-light: #f9fbfd;          /* พื้นหลังขาวนวล */
-      --accent-mint: #e6fff6;       /* สีเขียวมิ้นท์อ่อนมาก */
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Bai Jamjuree', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-dark);
-      /* ลายจุดจางๆ บนพื้นหลัง */
-      background-image: radial-gradient(rgba(141, 219, 189, 0.2) 1px, transparent 1px);
-      background-size: 30px 30px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* --- 2. Header --- */
-    .site-header {
-      background: #fff;
-      padding: 15px 0;
-      box-shadow: 0 2px 15px rgba(167, 139, 250, 0.1);
-      border-bottom: 2px solid var(--secondary-mint);
-    }
-    .brand { text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 10px; }
-    .brand-logo { height: 55px; }
-
-    /* --- 3. Personnel Section --- */
-    .personnel-section { padding: 60px 0; }
-    
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-    .section-title h2 { 
-      font-size: 2.2rem; 
-      margin: 0; 
-      color: var(--text-dark);
-    }
-    .section-title h2::after {
-      content: ''; 
-      display: block; 
-      width: 80px; 
-      height: 4px; 
-      background: linear-gradient(to right, var(--primary-purple), var(--secondary-mint)); 
-      margin: 12px auto;
-      border-radius: 10px;
-    }
-
-    .person-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 60px;
-      margin-bottom: 100px;
-    }
-
-    .person-item.reverse { flex-direction: row-reverse; }
-
-    /* กรอบรูปภาพสีม่วงและมิ้นท์ */
-    .photo-frame {
-      position: relative;
-      flex-shrink: 0;
-    }
-    .photo-frame::before {
-      content: '';
-      position: absolute;
-      top: -12px; left: -12px; right: -12px; bottom: -12px;
-      border: 3px solid var(--secondary-mint); /* เส้นขอบนอกสีเขียวมิ้นท์ */
-      border-radius: 50%;
-    }
-    .photo-frame img {
-      width: 260px;
-      height: 260px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 8px solid #fff;
-      display: block;
-      box-shadow: 0 10px 30px rgba(167, 139, 250, 0.2);
-    }
-
-    /* เนื้อหาข้อความ */
-    .person-info {
-      text-align: center;
-      max-width: 450px;
-    }
-    .person-info h3 {
-      font-size: 1.8rem;
-      color: var(--text-dark);
-      margin: 10px 0;
-    }
-    .person-info .role-badge {
-      display: inline-block;
-      background: var(--accent-mint);
-      color: var(--text-dark);
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
-      border: 1px solid var(--secondary-mint);
-    }
-    .person-info p {
-      margin: 5px 0;
-      font-size: 1.1rem;
-      color: #555;
-    }
-    
-    /* ไอคอนคำพูดเปลี่ยนเป็นสีม่วง */
-    .quote-icon {
-      font-size: 2rem;
-      color: var(--primary-purple);
-      opacity: 0.4;
-      display: block;
-      margin: 15px auto;
-    }
-
-    /* --- 4. Responsive --- */
-    @media (max-width: 768px) {
-      .person-item, .person-item.reverse {
-        flex-direction: column;
-        gap: 40px;
-      }
-      .photo-frame img {
-        width: 220px;
-        height: 220px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<header class="site-header">
-  <div class="container">
-    <a href="../index.html" class="brand">
-      <img src="../assets/img/ตรารพ.png" alt="โลโก้" class="brand-logo">
-      <div style="text-align: left;">
-        <strong style="color: var(--primary-purple); font-size: 1.2rem;">Anesthesia Unit</strong><br>
-        <small style="color: var(--secondary-mint);">University of Phayao Hospital</small>
-      </div>
-    </a>
-  </div>
-</header>
-
 <main class="personnel-section">
   <div class="container">
     
@@ -175,33 +13,69 @@
         <i class="fa-solid fa-quote-left quote-icon"></i>
         <span class="role-badge">หัวหน้างานพยาบาลวิสัญญี</span>
         <h3>พว.ยุพาพร ผางคำ</h3>
-        <p>หน่วยงานการพยาบาลวิสัญญี</p>
-        <p style="color: var(--primary-purple);"><i class="fa fa-phone"></i> 054-466666 ต่อ 7000</p>
         <i class="fa-solid fa-quote-right quote-icon"></i>
       </div>
     </article>
 
     <article class="person-item reverse">
-      <div class="photo-frame" style="border-color: var(--primary-purple);"> <img src="../assets/img/สุมาลี.jpg" alt="พว.สุมาลี เจริญสมศักดิ์">
+      <div class="photo-frame" style="--secondary-mint: var(--primary-purple);">
+        <img src="../assets/img/สุมาลี.jpg" alt="พว.สุมาลี เจริญสมศักดิ์">
       </div>
       <div class="person-info">
         <i class="fa-solid fa-quote-left quote-icon"></i>
         <span class="role-badge" style="background: #f3f0ff; border-color: var(--primary-purple);">วิสัญญีพยาบาลผู้ทรงคุณวุฒิ</span>
         <h3>พว.สุมาลี เจริญสมศักดิ์</h3>
-        <p>หน่วยงานการพยาบาลวิสัญญี</p>
-        <p style="color: var(--primary-purple);"><i class="fa fa-phone"></i> 054-466666 ต่อ 7001</p>
         <i class="fa-solid fa-quote-right quote-icon"></i>
       </div>
     </article>
 
-    </div>
+    <article class="person-item">
+      <div class="photo-frame">
+        <img src="../assets/img/สุวิมล.jpg" alt="พว.สุวิมล เทียมทอง">
+      </div>
+      <div class="person-info">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <span class="role-badge">วิสัญญีพยาบาล</span>
+        <h3>พว.สุวิมล เทียมทอง</h3>
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+      </div>
+    </article>
+
+    <article class="person-item reverse">
+      <div class="photo-frame" style="--secondary-mint: var(--primary-purple);">
+        <img src="../assets/img/จุฬาลักษณ์.jpg" alt="พว.จุฬาลักษณ์ ศักดิ์มั่นวงศ์">
+      </div>
+      <div class="person-info">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <span class="role-badge" style="background: #f3f0ff; border-color: var(--primary-purple);">วิสัญญีพยาบาล</span>
+        <h3>พว.จุฬาลักษณ์ ศักดิ์มั่นวงศ์</h3>
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+      </div>
+    </article>
+
+    <article class="person-item">
+      <div class="photo-frame">
+        <img src="../assets/img/ประภาศรี.jpg" alt="พว.ประภาศรี คำวงค์ษา">
+      </div>
+      <div class="person-info">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <span class="role-badge">พยาบาล</span>
+        <h3>พว.ประภาศรี คำวงค์ษา</h3>
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+      </div>
+    </article>
+
+    <article class="person-item reverse">
+      <div class="photo-frame" style="--secondary-mint: var(--primary-purple);">
+        <img src="../assets/img/จินต์จุฑา.jpg" alt="พว.จินต์จุฑา เชื้อสะอาด">
+      </div>
+      <div class="person-info">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <span class="role-badge" style="background: #f3f0ff; border-color: var(--primary-purple);">พยาบาล</span>
+        <h3>พว.จินต์จุฑา เชื้อสะอาด</h3>
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+      </div>
+    </article>
+
+  </div>
 </main>
-
-<footer style="padding: 60px; text-align: center; background: #fff;">
-  <a href="../index.html" style="color: var(--primary-purple); font-weight: bold; text-decoration: none; border: 2px solid var(--primary-purple); padding: 10px 25px; border-radius: 30px; transition: 0.3s;">
-    กลับหน้าแรก
-  </a>
-</footer>
-
-</body>
-</html>
