@@ -409,6 +409,43 @@ a { color: inherit; text-decoration: none; }
 .news-tag.soft { background: rgba(230, 245, 238, 0.95); }
 .news-meta { display: flex; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: 0.94rem; }
 
+.news-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.news-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: red;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.news-content {
+  padding: 20px;
+}
+
+.news-meta {
+  font-size: 13px;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* ==================================================
    TIMELINE
 ================================================== */
