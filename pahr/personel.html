@@ -1,74 +1,227 @@
-<div class="team-container">
-  <article class="intro-card left">
-    <div class="intro-photo-wrapper">
-      <img src="../assets/img/ยุพาพร.jpg" alt="พว.ยุพาพร ผางคำ" class="intro-photo">
-    </div>
-    <div class="intro-content">
-      <i class="fa-solid fa-quote-left quote-icon top"></i>
-      <h3 class="intro-name">พว.ยุพาพร ผางคำ</h3>
-      <p class="intro-pos">ตำแหน่ง หัวหน้างานพยาบาลวิสัญญี</p>
-      <p class="intro-dept">ประจำงานการพยาบาลวิสัญญี</p>
-      <i class="fa-solid fa-quote-right quote-icon bottom"></i>
-    </div>
-  </article>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>บุคลากร | งานการพยาบาลวิสัญญี</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <article class="intro-card right">
-    <div class="intro-content">
-      <i class="fa-solid fa-quote-left quote-icon top"></i>
-      <h3 class="intro-name">พว.สุมาลี เจริญสมศักดิ์</h3>
-      <p class="intro-pos">ตำแหน่ง วิสัญญีพยาบาลผู้ทรงคุณวุฒิ</p>
-      <i class="fa-solid fa-quote-right quote-icon bottom"></i>
-    </div>
-    <div class="intro-photo-wrapper">
-      <img src="../assets/img/สุมาลี.jpg" alt="พว.สุมาลี เจริญสมศักดิ์" class="intro-photo">
-    </div>
-  </article>
+  <style>
+    /* --- 1. การตั้งค่าพื้นฐาน --- */
+    :root {
+      --primary-color: #e07a5f; /* สีส้มอิฐแบบในรูป */
+      --text-brown: #5d4037;
+      --bg-cream: #fdfaf5;
+    }
 
-  <article class="intro-card left">
-    <div class="intro-photo-wrapper">
-      <img src="../assets/img/สุวิมล.jpg" alt="พว.สุวิมล เทียมทอง" class="intro-photo">
-    </div>
-    <div class="intro-content">
-      <i class="fa-solid fa-quote-left quote-icon"></i>
-      <h3 class="intro-name">พว.สุวิมล เทียมทอง</h3>
-      <p class="intro-pos">ตำแหน่ง วิสัญญีพยาบาล</p>
-      <i class="fa-solid fa-quote-right quote-icon"></i>
-    </div>
-  </article>
+    body {
+      margin: 0;
+      font-family: 'Bai Jamjuree', sans-serif;
+      background-color: var(--bg-cream);
+      color: #333;
+    }
 
-  <article class="intro-card right">
-    <div class="intro-content">
-      <i class="fa-solid fa-quote-left quote-icon"></i>
-      <h3 class="intro-name">พว.จุฬาลักษณ์ ศักดิ์มั่นวงศ์</h3>
-      <p class="intro-pos">ตำแหน่ง วิสัญญีพยาบาล</p>
-      <i class="fa-solid fa-quote-right quote-icon"></i>
-    </div>
-    <div class="intro-photo-wrapper">
-      <img src="../assets/img/จุฬาลักษณ์.jpg" alt="พว.จุฬาลักษณ์ ศักดิ์มั่นวงศ์" class="intro-photo">
-    </div>
-  </article>
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-  <article class="intro-card left">
-    <div class="intro-photo-wrapper">
-      <img src="../assets/img/ประภาศรี.jpg" alt="พว.ประภาศรี คำวงค์ษา" class="intro-photo">
-    </div>
-    <div class="intro-content">
-      <i class="fa-solid fa-quote-left quote-icon"></i>
-      <h3 class="intro-name">พว.ประภาศรี คำวงค์ษา</h3>
-      <p class="intro-pos">ตำแหน่ง พยาบาลวิชาชีพ</p>
-      <i class="fa-solid fa-quote-right quote-icon"></i>
-    </div>
-  </article>
+    /* --- 2. Header --- */
+    .site-header {
+      background: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .brand { text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 10px; }
+    .brand-logo { height: 50px; }
 
-  <article class="intro-card right">
-    <div class="intro-content">
-      <i class="fa-solid fa-quote-left quote-icon"></i>
-      <h3 class="intro-name">พว.จินต์จุฑา เชื้อสะอาด</h3>
-      <p class="intro-pos">ตำแหน่ง พยาบาลวิชาชีพ</p>
-      <i class="fa-solid fa-quote-right quote-icon"></i>
-    </div>
-    <div class="intro-photo-wrapper">
-      <img src="../assets/img/จินต์จุฑา.jpg" alt="พว.จินต์จุฑา เชื้อสะอาด" class="intro-photo">
-    </div>
-  </article>
+    /* --- 3. ส่วนแสดงบุคลากร (สไตล์ตามรูป) --- */
+    .personnel-section { padding: 60px 0; }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      color: var(--text-brown);
+    }
+    .section-title h2 { font-size: 2.2rem; margin: 0; position: relative; display: inline-block; }
+    .section-title h2::after {
+      content: ''; display: block; width: 60px; height: 3px; background: var(--primary-color); margin: 10px auto;
+    }
+
+    .person-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 80px;
+    }
+
+    /* สลับฝั่ง */
+    .person-item.reverse { flex-direction: row-reverse; }
+
+    /* รูปภาพวงกลม */
+    .photo-frame {
+      position: relative;
+      flex-shrink: 0;
+    }
+    .photo-frame::before {
+      content: '';
+      position: absolute;
+      top: -10px; left: -10px; right: -10px; bottom: -10px;
+      border: 2px solid var(--primary-color);
+      border-radius: 50%;
+    }
+    .photo-frame img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 8px solid #fff;
+      display: block;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* ข้อความ */
+    .person-info {
+      text-align: center;
+      max-width: 450px;
+    }
+    .person-info h3 {
+      font-size: 1.8rem;
+      color: var(--text-brown);
+      margin: 10px 0;
+    }
+    .person-info p {
+      margin: 5px 0;
+      font-size: 1.1rem;
+      color: #666;
+    }
+    .quote-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      opacity: 0.5;
+      display: block;
+      margin: 15px auto;
+    }
+
+    /* --- 4. Responsive (มือถือ) --- */
+    @media (max-width: 768px) {
+      .person-item, .person-item.reverse {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+      }
+      .photo-frame img {
+        width: 200px;
+        height: 200px;
+      }
+      .person-info h3 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/ตรารพ.png" alt="โลโก้" class="brand-logo">
+      <div style="text-align: left;">
+        <strong>Anesthesia Unit</strong><br>
+        <small>University of Phayao Hospital</small>
+      </div>
+    </a>
   </div>
+</header>
+
+<main class="personnel-section">
+  <div class="container">
+    
+    <div class="section-title">
+      <h2>วิสัญญีพยาบาล</h2>
+    </div>
+
+    <article class="person-item">
+      <div class="photo-frame">
+        <img src="../assets/img/ยุพาพร.jpg" alt="พว.ยุพาพร ผางคำ">
+      </div>
+      <div class="person-info">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <h3>พว.ยุพาพร ผางคำ</h3>
+        <p><strong>ตำแหน่ง หัวหน้างานพยาบาลวิสัญญี</strong></p>
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+      </div>
+    </article>
+
+    <article class="person-item reverse">
+      <div class="photo-frame">
+        <img src="../assets/img/สุมาลี.jpg" alt="พว.สุมาลี เจริญสมศักดิ์">
+      </div>
+      <div class="person-info">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <h3>พว.สุมาลี เจริญสมศักดิ์</h3>
+        <p><strong>ตำแหน่ง วิสัญญีพยาบาลผู้ทรงคุณวุฒิ</strong></p>
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+      </div>
+    </article>
+
+    <article class="person-item">
+      <div class="photo-frame">
+        <img src="../assets/img/สุวิมล.jpg" alt="พว.สุวิมล เทียมทอง">
+      </div>
+      <div class="person-info">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <h3>พว.สุวิมล เทียมทอง</h3>
+        <p><strong>ตำแหน่ง วิสัญญีพยาบาล</strong></p>
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+      </div>
+    </article>
+
+    <article class="person-item reverse">
+      <div class="photo-frame">
+        <img src="../assets/img/จุฬาลักษณ์.jpg" alt="พว.จุฬาลักษณ์ ศักดิ์มั่นวงศ์">
+      </div>
+      <div class="person-info">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <h3>พว.จุฬาลักษณ์ ศักดิ์มั่นวงศ์</h3>
+        <p><strong>ตำแหน่ง วิสัญญีพยาบาล</strong></p>
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+      </div>
+    </article>
+
+    <article class="person-item">
+      <div class="photo-frame">
+        <img src="../assets/img/ประภาศรี.jpg" alt="พว.ประภาศรี คำวงค์ษา">
+      </div>
+      <div class="person-info">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <h3>พว.ประภาศรี คำวงค์ษา</h3>
+        <p><strong>ตำแหน่ง พยาบาล</strong></p>
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+      </div>
+    </article>
+
+    <article class="person-item reverse">
+      <div class="photo-frame">
+        <img src="../assets/img/จินต์จุฑา.jpg" alt="พว.จินต์จุฑา เชื้อสะอาด">
+      </div>
+      <div class="person-info">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <h3>พว.จินต์จุฑา เชื้อสะอาด</h3>
+        <p><strong>ตำแหน่ง พยาบาล</strong></p>
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer style="padding: 40px; text-align: center; border-top: 1px solid #ddd;">
+  <a href="../index.html" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">กลับหน้าแรก</a>
+</footer>
+
+</body>
+</html>
