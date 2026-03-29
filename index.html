@@ -455,3 +455,166 @@
           <p>ระเบียบวาระ รายงานการประชุม และสรุปผลการดำเนินงานรายเดือน</p>
           <a href="#">ดาวน์โหลดตัวอย่าง</a>
         </article>
+
+        <!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Footer Design</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Prompt', sans-serif;
+    }
+
+    .footer {
+        background: linear-gradient(135deg, #a78bfa, #6ee7b7);
+        color: #ffffff;
+        padding: 30px 20px;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .footer-left {
+        flex: 1 1 60%;
+    }
+
+    .footer-left h3 {
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    .footer-left p {
+        margin: 8px 0;
+        line-height: 1.6;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 15px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer-right {
+        flex: 1 1 300px;
+    }
+
+    .stats-box {
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: rgba(255,255,255,0.1);
+        backdrop-filter: blur(5px);
+    }
+
+    .stats-box h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .stat-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
+        font-size: 15px;
+    }
+
+    .stat-item i {
+        margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- LEFT -->
+        <div class="footer-left">
+            <h3>ติดต่อเรา</h3>
+            <p>
+                15 สาขาวิชาสัญญีวิทยา คณะแพทยศาสตร์<br>
+                มหาวิทยาลัยสงขลานครินทร์<br>
+                ถ.กาญจนวนิช ต.คอหงส์ อ.หาดใหญ่ จ.สงขลา 90110
+            </p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa fa-phone"></i>
+                    <span>074-451651-2</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa fa-fax"></i>
+                    <span>074-281656</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa fa-envelope"></i>
+                    <span>anespsuweb@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-right">
+            <div class="stats-box">
+                <h3>จำนวนผู้เข้าชม</h3>
+
+                <div class="stat-item">
+                    <span><i class="fa fa-eye"></i> ทั้งหมด</span>
+                    <span>30029</span>
+                </div>
+
+                <div class="stat-item">
+                    <span><i class="fa fa-user"></i> วันนี้</span>
+                    <span>8</span>
+                </div>
+
+                <div class="stat-item">
+                    <span><i class="fa fa-users"></i> เดือน มีนาคม</span>
+                    <span>433</span>
+                </div>
+
+                <div class="stat-item">
+                    <span><i class="fa fa-user-friends"></i> ปี 2569</span>
+                    <span>1304</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
